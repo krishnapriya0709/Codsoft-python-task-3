@@ -1,0 +1,28 @@
+import random
+import string
+while True:
+   
+    length = int(input("\nEnter the desired length of the password: "))
+
+    
+    lower_case = string.ascii_lowercase
+    upper_case = string.ascii_uppercase
+    digits = string.digits
+    special_chars = '_.'
+
+    
+    all_chars = lower_case + upper_case + digits + special_chars
+
+    
+    password = ''
+    for i in range(length):
+        password += random.choice(all_chars)
+
+    
+    print("Generated password: ",password)
+    again=(input("Do you want to create another  password ? : "))
+    if again.lower()=="yes":
+        print("..........................................................................")
+    else:
+        print("..........................................................................")
+        break
